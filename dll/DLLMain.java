@@ -17,6 +17,13 @@ public class DLLMain {
             System.out.println("5. Tampilkan data");
             System.out.println("6. Cari Mahasiswa berdasarkan NIM");
             System.out.println("7. Tambah data setelah NIM tertentu");
+            System.out.println("8. Tambah data pada indeks tertentu");
+            System.out.println("9. Hapus data pada indeks tertentu");
+            System.out.println("10. Hapus data setelah NIM tertentu");
+            System.out.println("11. Tampilkan data pada index tertentu");
+            System.out.println("12. Tampilkan data pertama (head)");
+            System.out.println("13. Tampilkan data terakhir (tail)");
+            System.out.println("14. Tampilkan jumlah data");
             System.out.println("0. Keluar");
             System.out.print("Pilih menu: ");
             pilihan = scan.nextInt();
@@ -58,6 +65,43 @@ public class DLLMain {
                     String key = scan.nextLine();
                     Mahasiswa09 mhs = inputMahasiswa(scan);
                     list.insertAfter(key, mhs);
+                    break;
+                case 8: {
+                    System.out.print("Masukkan index: ");
+                    int index = scan.nextInt();
+                    scan.nextLine();
+                    Mahasiswa09 mhsBaru = inputMahasiswa(scan);
+                    list.add(mhsBaru, index);
+                    break;
+                }
+                case 9: {
+                    System.out.print("Masukkan index yang akan dihapus: ");
+                    int index = scan.nextInt();
+                    scan.nextLine();
+                    list.remove(index);
+                    break;
+                }
+                case 10: {
+                    System.out.print("Masukkan NIM: ");
+                    String keyNim = scan.nextLine();
+                    list.removeAfter(keyNim);
+                    break;
+                }
+                case 11: {
+                    System.out.print("Masukkan index: ");
+                    int index = scan.nextInt();
+                    scan.nextLine();
+                    list.getIndex(index);
+                    break;
+                }
+                case 12:
+                    list.getFirst();
+                    break;
+                case 13:
+                    list.getLast();
+                    break;
+                case 14:
+                    list.tampilkanUkuran();
                     break;
                 case 0:
                     System.out.println("Keluar dari program.");
