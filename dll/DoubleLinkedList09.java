@@ -91,6 +91,9 @@ public class DoubleLinkedList09 {
             System.out.println("List kosong, tidak bisa dihapus.");
             return;
         }
+        System.out.println("Data berhasil dihapus.");
+        System.out.println("Data yang terhapus adalah ...");
+        head.data.tampil();
         if (head == tail) {
             head = tail = null;
         } else {
@@ -104,6 +107,9 @@ public class DoubleLinkedList09 {
             System.out.println("List kosong, tidak bisa dihapus.");
             return;
         }
+        System.out.println("Data berhasil dihapus.");
+        System.out.println("Data yang terhapus adalah ...");
+        tail.data.tampil();
         if (head == tail) {
             head = tail = null;
         } else {
